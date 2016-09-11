@@ -32,7 +32,7 @@ module.exports = function(passport) {
       } else {
 
         var newUser = new User();
-        // newUser.username = username;
+        newUser.username = req.body.username;
         newUser.email = email;
         newUser.password = User.encrypt(password);
 
