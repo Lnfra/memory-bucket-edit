@@ -43,7 +43,7 @@ app.route("/logout")
 app.route('/profile')
     .get(usersController.profile)
 
-app.route('/:user_id')
+app.route('/user/:user_id')
     .get(authenticatedUser, usersController.showUserBucket);
 
 app.param('user_id', usersController.user_by_id);
