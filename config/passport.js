@@ -10,6 +10,7 @@ module.exports = function(passport) {
   passport.deserializeUser(function(id, done) {
     User.findById(id, function(err, user) {
       // If a user is found it will be assigned to req.user
+      console.log('deserialize user found is: ' + user)
       done(err, user);
     });
   });
